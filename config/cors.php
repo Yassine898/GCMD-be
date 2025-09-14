@@ -19,9 +19,9 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:3000'],
+    'allowed_origins' => ['https://gcmd.netlify.app'],
 
-    'allowed_origins_patterns' => ['http://localhost:3000'],
+    'allowed_origins_patterns' => ['https://gcmd.netlify.app'],
 
     'allowed_headers' => ['*'],
 
