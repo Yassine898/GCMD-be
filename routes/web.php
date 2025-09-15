@@ -11,7 +11,7 @@ Route::get('/', function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/sanctum/csrf-cookie', function (Request $request) {
+Route::get('/csrf-cookie', function (Request $request) {
     return response()->json()->withCookie(
         new Cookie(
             'XSRF-TOKEN',
