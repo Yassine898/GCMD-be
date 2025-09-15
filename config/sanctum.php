@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', 'https://gcmd.netlify.app')),
+    'stateful' => ['gcmd.netlify.app'],
 
     /*
     |--------------------------------------------------------------------------
