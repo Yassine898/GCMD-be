@@ -10,8 +10,8 @@ use App\Http\Controllers\WalletController;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/login', function () {
-    return response()->json(['message'=>'hello world']);
+Route::post('/login', function (Request $request) {
+    return response()->json(['message'=>'hello world','email'=>$request['email']]);
 });
 
 Route::delete('/member/delete/{id}',[MemberController::class,'delete']);
