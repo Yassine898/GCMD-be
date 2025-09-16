@@ -10,10 +10,7 @@ use App\Http\Controllers\WalletController;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/login', function (Request $request) {
-    return response()->json(['message'=>'hello world','email'=>$request['email']]);
-});
-
+Route::post('/login',[UserController::class,'signin']);
 Route::delete('/member/delete/{id}',[MemberController::class,'delete']);
 Route::get('/member/{id}',[MemberController::class,'detail']);
 Route::put('/wallet/update-balance/member/{id}',[WalletController::class,'updateBalance']);
