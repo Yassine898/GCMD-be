@@ -15,11 +15,7 @@ return [
     |
     */
 
-    'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', sprintf(
-    '%s%s',
-    'localhost,localhost:3000,gcmd.netlify.app,127.0.0.1,127.0.0.1:8000,::1',
-    Sanctum\Sanctum::currentApplicationUrlWithPort()
-))),
+    'stateful' =>['https://gcmd.netlify.app'],
 
 
     /*
